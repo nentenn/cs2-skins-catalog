@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== БАЗОВА ТЕМА САЙТУ ===== */
+body {
+    @apply bg-black text-gray-100 antialiased;
+}
+
+/* Темно-синя панель (форми, картки, фільтри) */
+.panel-dark {
+    @apply bg-[#050b1a] border border-gray-800 rounded-2xl;
+}
+
+/* ===== ІНПУТИ / SELECT / TEXTAREA ===== */
+.input-dark,
+.select-dark,
+.textarea-dark {
+    @apply w-full bg-[#050b1a] text-white border border-gray-700 
+           rounded-lg px-4 py-2 text-sm
+           focus:outline-none focus:border-yellow-400;
+}
+
+/* плейсхолдер (сірий, щоб було видно текст) */
+.input-dark::placeholder,
+.select-dark::placeholder,
+.textarea-dark::placeholder {
+    @apply text-gray-400;
+}
+
+/* number – світлі стрілочки */
+.input-dark[type="number"]::-webkit-inner-spin-button,
+.input-dark[type="number"]::-webkit-outer-spin-button {
+    filter: invert(1);
+}
+
+/* ===== ГОЛОВНА КНОПКА (ТЕМНО-СИНЯ) ===== */
+.btn-blue {
+    @apply inline-flex items-center justify-center
+           bg-[#0b1f4a] text-white font-semibold
+           px-4 py-2 text-sm rounded-lg
+           shadow-sm transition;
+}
+.btn-blue:hover {
+    @apply bg-[#152f6b];
+}
+
+/* Менша версія для "+ Категорія", "+ Товар" */
+.btn-blue-sm {
+    @apply inline-flex items-center justify-center
+           bg-[#0b1f4a] text-white font-semibold
+           px-3 py-1.5 text-xs rounded-md
+           shadow-sm transition;
+}
+.btn-blue-sm:hover {
+    @apply bg-[#152f6b];
+}
+
+/* Жовта кнопка, якщо раптом десь лишиш (наприклад, "Фільтрувати") */
+.btn-yellow {
+    @apply inline-flex items-center justify-center
+           bg-yellow-500 text-black font-semibold
+           px-4 py-2 text-sm rounded-lg
+           hover:bg-yellow-400 transition;
+}
+/* ТЕМНИЙ ФОН */
+body {
+    @apply bg-[#05070b] text-gray-100;
+}
+
+/* УНІВЕРСАЛЬНІ ІНПУТИ */
+.input-dark {
+    @apply w-full bg-[#0A1220] text-white border border-gray-700 rounded-lg px-3 py-2
+           focus:outline-none focus:border-yellow-400 placeholder-gray-400;
+}
+
+/* ТЕМНО-СИНЯ КНОПКА */
+.btn-dark {
+    @apply bg-[#0F1B33] text-white font-semibold px-4 py-2 rounded-lg
+           hover:bg-[#162544] transition;
+}
+
+/* ОБВОДКА ДЛЯ ДРУГОРЯДНИХ */
+.btn-dark-outline {
+    @apply border border-gray-500 text-white px-4 py-2 rounded-lg
+           hover:border-yellow-400 hover:text-yellow-400 transition;
+}
